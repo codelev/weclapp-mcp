@@ -1397,3 +1397,10 @@ def register(mcp: FastMCP) -> None:
             file_bytes=image_bytes,
             filename=filename or "image.jpg",
         )
+
+    # Register resources
+    @mcp.resource("party://{id}")
+    async def get_party_resource(id: str) -> dict:
+        """Get a party by ID as a resource."""
+        from client import api_get
+        return await api_get(f"/party/id/{id}")

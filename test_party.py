@@ -362,5 +362,24 @@ class TestToolRegistration:
             assert tool_name in tool_names, f"Tool {tool_name} not found"
 
 
+class TestResourceRegistration:
+    """Tests for resource registration."""
+
+    @pytest.mark.asyncio
+    async def test_party_resource_registered(self):
+        """Test that party resource is registered."""
+        from mcp.server.fastmcp import FastMCP
+        from server import mcp
+
+        # The resource should be registered on the mcp instance
+        # FastMCP stores URI template resources in _resource_manager._templates
+        templates = mcp._resource_manager._templates
+        
+        # Check for party resource pattern in the template keys
+        template_keys = list(templates.keys())
+        party_resources = [key for key in template_keys if "party" in str(key).lower()]
+        assert len(party_resources) > 0, f"Party resource not found. Available: {template_keys}"
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
