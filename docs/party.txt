@@ -1,0 +1,533 @@
+
+--- GET /party ---
+Summary: query party
+
+Parameters:
+  1. offset - required: no, type: integer, format: int32, enum: -, pattern: -, maxLength: -, minLength: -
+  2. page - required: no, type: integer, format: int32, enum: -, pattern: -, maxLength: -, minLength: -
+  3. pageSize - required: no, type: integer, format: int32, enum: -, pattern: -, maxLength: -, minLength: -
+  4. serializeNulls - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  5. sort - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  6. filter - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  7. properties - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  8. includeReferencedEntities - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  9. additionalProperties - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+
+--- POST /party ---
+Summary: create a party
+
+Parameters:
+  1. dryRun - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  2. id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  3. createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  4. lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  5. version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  6. customAttributes - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  7. customAttributes[]attributeDefinitionId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  8. customAttributes[]booleanValue - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  9. customAttributes[]dateValue - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  10. customAttributes[]entityId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  11. customAttributes[]entityReferences - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  12. customAttributes[]entityReferences[]entityId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  13. customAttributes[]entityReferences[]entityName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  14. customAttributes[]numberValue - required: no, type: string, format: decimal, enum: -, pattern: -, maxLength: -, minLength: -
+  15. customAttributes[]selectedValueId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  16. customAttributes[]selectedValues - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  17. customAttributes[]selectedValues[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  18. customAttributes[]stringValue - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  19. addresses - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  20. addresses[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  21. addresses[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  22. addresses[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  23. addresses[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  24. addresses[]city - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  25. addresses[]company - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  26. addresses[]company2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  27. addresses[]countryCode - required: no, type: string, format: -, enum: [AC,AD,AE,AF,AG,AI,AL,AM,AN,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CS,CU,CV,CW,CX,CY,CZ,DE,DG,DJ,DK,DM,DO,DZ,EA,EC,EE,EG,EH,ER,ES,ET,EU,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,IC,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,SS,ST,SV,SX,SY,SZ,TA,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,UNKNOWN,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,XI,XK,YE,YT,ZA,ZM,ZW], pattern: -, maxLength: -, minLength: -
+  28. addresses[]deliveryAddress - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  29. addresses[]firstName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  30. addresses[]globalLocationNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  31. addresses[]invoiceAddress - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  32. addresses[]lastName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  33. addresses[]phoneNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  34. addresses[]postOfficeBoxCity - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  35. addresses[]postOfficeBoxNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  36. addresses[]postOfficeBoxZipCode - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  37. addresses[]primaryAddress - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  38. addresses[]salutation - required: no, type: string, format: -, enum: [COMPANY,FAMILY,MR,MRS,NO_SALUTATION], pattern: -, maxLength: -, minLength: -
+  39. addresses[]state - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  40. addresses[]street1 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  41. addresses[]street2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  42. addresses[]titleId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  43. addresses[]zipcode - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  44. birthDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  45. company - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  46. company2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  47. deliveryAddressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  48. email - required: no, type: string, format: email, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  49. emailHome - required: no, type: string, format: email, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  50. fax - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  51. firstName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  52. invoiceAddressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  53. lastName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  54. middleName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  55. mobilePhone1 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  56. onlineAccounts - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  57. onlineAccounts[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  58. onlineAccounts[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  59. onlineAccounts[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  60. onlineAccounts[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  61. onlineAccounts[]accountName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  62. onlineAccounts[]accountType - required: no, type: string, format: -, enum: [AMAZON,BLOG,EBAY,FACEBOOK,GOOGLE_DRIVE,INSTAGRAM,LINKEDIN,OTHER,PINTEREST,SKYPE,SLIDESHARE,TWITTER,WIKIPEDIA,XING,YELP,YOUTUBE], pattern: -, maxLength: -, minLength: -
+  63. onlineAccounts[]url - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  64. partyType - required: no, type: string, format: -, enum: [ORGANIZATION,PERSON], pattern: -, maxLength: -, minLength: -
+  65. personCompany - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  66. personDepartmentId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  67. personRoleId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  68. phone - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  69. primaryAddressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  70. salutation - required: no, type: string, format: -, enum: [COMPANY,FAMILY,MR,MRS,NO_SALUTATION], pattern: -, maxLength: -, minLength: -
+  71. tags - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  72. titleId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  73. website - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  74. bankAccounts - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  75. bankAccounts[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  76. bankAccounts[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  77. bankAccounts[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  78. bankAccounts[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  79. bankAccounts[]accountHolder - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  80. bankAccounts[]accountNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  81. bankAccounts[]bankCode - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  82. bankAccounts[]creditInstitute - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  83. bankAccounts[]partyId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  84. bankAccounts[]primary - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  85. commercialLanguageId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  86. commissionBlock - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  87. commissionSalesPartners - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  88. commissionSalesPartners[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  89. commissionSalesPartners[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  90. commissionSalesPartners[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  91. commissionSalesPartners[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  92. commissionSalesPartners[]commissionFix - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  93. commissionSalesPartners[]commissionPercentage - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  94. commissionSalesPartners[]commissionType - required: no, type: string, format: -, enum: [FIX,FIX_AND_MARGIN,FIX_AND_REVENUE,MARGIN,NO_COMMISSION,REVENUE], pattern: -, maxLength: -, minLength: -
+  95. commissionSalesPartners[]salesPartnerSupplierId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  96. companySizeId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  97. competitor - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  98. contacts - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  99. contacts[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  100. convertedOnDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  101. currencyId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  102. customer - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  103. customerAllowDropshippingOrderCreation - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  104. customerAmountInsured - required: no, type: string, format: decimal, enum: -, pattern: ^-?([0-9]{1,14})([.][0-9]{1,4})?$, maxLength: -, minLength: -
+  105. customerAnnualRevenue - required: no, type: string, format: decimal, enum: -, pattern: ^-?([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  106. customerBlockNotice - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  107. customerBlocked - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  108. customerBusinessType - required: no, type: string, format: -, enum: [B2B,B2C,B2G], pattern: -, maxLength: -, minLength: -
+  109. customerCategoryId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  110. customerCreditLimit - required: no, type: string, format: decimal, enum: -, pattern: ^-?([0-9]{1,14})([.][0-9]{1,4})?$, maxLength: -, minLength: -
+  111. customerCurrentSalesStageId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  112. customerDebtorAccountId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  113. customerDebtorAccountingCodeId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  114. customerDefaultHeaderDiscount - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  115. customerDefaultHeaderSurcharge - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  116. customerDefaultShippingCarrierId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  117. customerDefaultWarehouseId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  118. customerDeliveryBlock - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  119. customerInsolvent - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  120. customerInsured - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  121. customerInternalNote - required: no, type: string, format: html, enum: -, pattern: -, maxLength: 4000.0, minLength: -
+  122. customerLossDescription - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  123. customerLossReasonId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  124. customerNonStandardTaxId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  125. customerNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  126. customerNumberOld - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  127. customerPaymentMethodId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  128. customerSalesChannel - required: no, type: string, format: -, enum: [GROSS1,GROSS10,GROSS100,GROSS101,GROSS102,GROSS103,GROSS104,GROSS105,GROSS106,GROSS107,GROSS108,GROSS109,GROSS11,GROSS110,GROSS111,GROSS112,GROSS113,GROSS114,GROSS115,GROSS116,GROSS117,GROSS118,GROSS119,GROSS12,GROSS120,GROSS121,GROSS122,GROSS123,GROSS124,GROSS125,GROSS126,GROSS127,GROSS128,GROSS129,GROSS13,GROSS130,GROSS131,GROSS132,GROSS133,GROSS134,GROSS135,GROSS136,GROSS137,GROSS138,GROSS139,GROSS14,GROSS140,GROSS141,GROSS142,GROSS143,GROSS144,GROSS145,GROSS146,GROSS147,GROSS148,GROSS149,GROSS15,GROSS150,GROSS151,GROSS152,GROSS153,GROSS154,GROSS155,GROSS156,GROSS157,GROSS158,GROSS159,GROSS16,GROSS160,GROSS161,GROSS162,GROSS163,GROSS164,GROSS165,GROSS166,GROSS167,GROSS168,GROSS169,GROSS17,GROSS170,GROSS171,GROSS172,GROSS173,GROSS174,GROSS175,GROSS176,GROSS177,GROSS178,GROSS179,GROSS18,GROSS180,GROSS181,GROSS182,GROSS183,GROSS184,GROSS185,GROSS186,GROSS187,GROSS188,GROSS189,GROSS19,GROSS190,GROSS191,GROSS192,GROSS193,GROSS194,GROSS195,GROSS196,GROSS197,GROSS198,GROSS199,GROSS2,GROSS20,GROSS200,GROSS201,GROSS202,GROSS203,GROSS204,GROSS205,GROSS206,GROSS207,GROSS208,GROSS209,GROSS21,GROSS210,GROSS211,GROSS212,GROSS213,GROSS214,GROSS215,GROSS216,GROSS217,GROSS218,GROSS219,GROSS22,GROSS220,GROSS221,GROSS222,GROSS223,GROSS224,GROSS225,GROSS226,GROSS227,GROSS228,GROSS229,GROSS23,GROSS230,GROSS231,GROSS232,GROSS233,GROSS234,GROSS235,GROSS236,GROSS237,GROSS238,GROSS239,GROSS24,GROSS240,GROSS241,GROSS242,GROSS243,GROSS244,GROSS245,GROSS246,GROSS247,GROSS248,GROSS249,GROSS25,GROSS250,GROSS251,GROSS252,GROSS253,GROSS254,GROSS255,GROSS256,GROSS257,GROSS258,GROSS259,GROSS26,GROSS260,GROSS261,GROSS262,GROSS263,GROSS264,GROSS265,GROSS266,GROSS267,GROSS268,GROSS269,GROSS27,GROSS270,GROSS271,GROSS272,GROSS273,GROSS274,GROSS275,GROSS276,GROSS277,GROSS278,GROSS279,GROSS28,GROSS280,GROSS281,GROSS282,GROSS283,GROSS284,GROSS285,GROSS286,GROSS287,GROSS288,GROSS289,GROSS29,GROSS290,GROSS291,GROSS292,GROSS293,GROSS294,GROSS295,GROSS296,GROSS297,GROSS298,GROSS299,GROSS3,GROSS30,GROSS300,GROSS31,GROSS32,GROSS33,GROSS34,GROSS35,GROSS36,GROSS37,GROSS38,GROSS39,GROSS4,GROSS40,GROSS41,GROSS42,GROSS43,GROSS44,GROSS45,GROSS46,GROSS47,GROSS48,GROSS49,GROSS5,GROSS50,GROSS51,GROSS52,GROSS53,GROSS54,GROSS55,GROSS56,GROSS57,GROSS58,GROSS59,GROSS6,GROSS60,GROSS61,GROSS62,GROSS63,GROSS64,GROSS65,GROSS66,GROSS67,GROSS68,GROSS69,GROSS7,GROSS70,GROSS71,GROSS72,GROSS73,GROSS74,GROSS75,GROSS76,GROSS77,GROSS78,GROSS79,GROSS8,GROSS80,GROSS81,GROSS82,GROSS83,GROSS84,GROSS85,GROSS86,GROSS87,GROSS88,GROSS89,GROSS9,GROSS90,GROSS91,GROSS92,GROSS93,GROSS94,GROSS95,GROSS96,GROSS97,GROSS98,GROSS99,NET1,NET10,NET100,NET101,NET102,NET103,NET104,NET105,NET106,NET107,NET108,NET109,NET11,NET110,NET111,NET112,NET113,NET114,NET115,NET116,NET117,NET118,NET119,NET12,NET120,NET121,NET122,NET123,NET124,NET125,NET126,NET127,NET128,NET129,NET13,NET130,NET131,NET132,NET133,NET134,NET135,NET136,NET137,NET138,NET139,NET14,NET140,NET141,NET142,NET143,NET144,NET145,NET146,NET147,NET148,NET149,NET15,NET150,NET151,NET152,NET153,NET154,NET155,NET156,NET157,NET158,NET159,NET16,NET160,NET161,NET162,NET163,NET164,NET165,NET166,NET167,NET168,NET169,NET17,NET170,NET171,NET172,NET173,NET174,NET175,NET176,NET177,NET178,NET179,NET18,NET180,NET181,NET182,NET183,NET184,NET185,NET186,NET187,NET188,NET189,NET19,NET190,NET191,NET192,NET193,NET194,NET195,NET196,NET197,NET198,NET199,NET2,NET20,NET200,NET201,NET202,NET203,NET204,NET205,NET206,NET207,NET208,NET209,NET21,NET210,NET211,NET212,NET213,NET214,NET215,NET216,NET217,NET218,NET219,NET22,NET220,NET221,NET222,NET223,NET224,NET225,NET226,NET227,NET228,NET229,NET23,NET230,NET231,NET232,NET233,NET234,NET235,NET236,NET237,NET238,NET239,NET24,NET240,NET241,NET242,NET243,NET244,NET245,NET246,NET247,NET248,NET249,NET25,NET250,NET251,NET252,NET253,NET254,NET255,NET256,NET257,NET258,NET259,NET26,NET260,NET261,NET262,NET263,NET264,NET265,NET266,NET267,NET268,NET269,NET27,NET270,NET271,NET272,NET273,NET274,NET275,NET276,NET277,NET278,NET279,NET28,NET280,NET281,NET282,NET283,NET284,NET285,NET286,NET287,NET288,NET289,NET29,NET290,NET291,NET292,NET293,NET294,NET295,NET296,NET297,NET298,NET299,NET3,NET30,NET300,NET31,NET32,NET33,NET34,NET35,NET36,NET37,NET38,NET39,NET4,NET40,NET41,NET42,NET43,NET44,NET45,NET46,NET47,NET48,NET49,NET5,NET50,NET51,NET52,NET53,NET54,NET55,NET56,NET57,NET58,NET59,NET6,NET60,NET61,NET62,NET63,NET64,NET65,NET66,NET67,NET68,NET69,NET7,NET70,NET71,NET72,NET73,NET74,NET75,NET76,NET77,NET78,NET79,NET8,NET80,NET81,NET82,NET83,NET84,NET85,NET86,NET87,NET88,NET89,NET9,NET90,NET91,NET92,NET93,NET94,NET95,NET96,NET97,NET98,NET99], pattern: -, maxLength: -, minLength: -
+  129. customerSalesOrderPaymentType - required: no, type: string, format: -, enum: [ADVANCE_PAYMENT,COUNTER_SALES,PART_PAYMENT,PREPAYMENT,STANDARD], pattern: -, maxLength: -, minLength: -
+  130. customerSalesProbability - required: no, type: integer, format: int32, enum: -, pattern: -, maxLength: -, minLength: -
+  131. customerSalesStageHistory - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  132. customerSalesStageHistory[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  133. customerSalesStageHistory[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  134. customerSalesStageHistory[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  135. customerSalesStageHistory[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  136. customerSalesStageHistory[]salesStageId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  137. customerSalesStageHistory[]userId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  138. customerSatisfaction - required: no, type: string, format: -, enum: [NEUTRAL,SATISFIED,UNSATISFIED], pattern: -, maxLength: -, minLength: -
+  139. customerShipmentMethodId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  140. customerSupplierNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  141. customerTermOfPaymentId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  142. customerUseCustomsTariffNumber - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  143. deliveryEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  144. description - required: no, type: string, format: html, enum: -, pattern: -, maxLength: -, minLength: -
+  145. dunningAddressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  146. dunningEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  147. enableDropshippingInNewSupplySources - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  148. eoriNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  149. factoring - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  150. fixPhone2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  151. fixedResponsibleUser - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  152. formerSalesPartner - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  153. habitualExporter - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  154. imageId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  155. invoiceBlock - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  156. invoiceRecipientId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  157. leadRatingId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  158. leadSourceId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  159. leadStatus - required: no, type: string, format: -, enum: [CONVERTED,DISQUALIFIED,NEW,PREQUALIFIED,QUALIFIED], pattern: -, maxLength: -, minLength: -
+  160. legalFormId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  161. mobilePhone2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  162. optInEmail - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  163. optInLetter - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  164. optInPhone - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  165. optInSms - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  166. parentPartyId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  167. partyEmailAddresses - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  168. partyEmailAddresses[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  169. partyEmailAddresses[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  170. partyEmailAddresses[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  171. partyEmailAddresses[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  172. partyEmailAddresses[]bccAddresses - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  173. partyEmailAddresses[]ccAddresses - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  174. partyEmailAddresses[]toAddresses - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  175. partyHabitualExporterLettersOfIntent - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  176. partyHabitualExporterLettersOfIntent[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  177. partyHabitualExporterLettersOfIntent[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  178. partyHabitualExporterLettersOfIntent[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  179. partyHabitualExporterLettersOfIntent[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  180. partyHabitualExporterLettersOfIntent[]automaticallySuggestInInvoice - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  181. partyHabitualExporterLettersOfIntent[]date - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  182. partyHabitualExporterLettersOfIntent[]fromSupplier - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  183. partyHabitualExporterLettersOfIntent[]invoices - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  184. partyHabitualExporterLettersOfIntent[]invoices[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  185. partyHabitualExporterLettersOfIntent[]numberDeclarer - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 30.0, minLength: -
+  186. partyHabitualExporterLettersOfIntent[]numberSupplier - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 30.0, minLength: -
+  187. partyHabitualExporterLettersOfIntent[]totalAmount - required: no, type: string, format: decimal, enum: -, pattern: ^-?([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  188. partyHabitualExporterLettersOfIntent[]type - required: no, type: string, format: -, enum: [MULTIPLE_ACCOUNTING_EVENTS,SINGLE_ACCOUNTING_EVENT], pattern: -, maxLength: -, minLength: -
+  189. phoneHome - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  190. primaryContactId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  191. publicPageExpirationDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  192. publicPageUuid - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  193. purchaseEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  194. purchaseViaPlafond - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  195. quotationEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  196. ratingId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  197. referenceNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  198. regionId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  199. responsibleUserId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  200. salesInvoiceEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  201. salesOrderEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  202. salesPartner - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  203. salesPartnerDefaultCommissionFix - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  204. salesPartnerDefaultCommissionPercentage - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  205. salesPartnerDefaultCommissionType - required: no, type: string, format: -, enum: [FIX,FIX_AND_MARGIN,FIX_AND_REVENUE,MARGIN,NO_COMMISSION,REVENUE], pattern: -, maxLength: -, minLength: -
+  206. sectorId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  207. supplier - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  208. supplierActive - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  209. supplierCreditorAccountId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  210. supplierCreditorAccountingCodeId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  211. supplierCustomerNumberAtSupplier - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 64.0, minLength: -
+  212. supplierDefaultShippingCarrierId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  213. supplierInternalNote - required: no, type: string, format: html, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  214. supplierMergeItemsForOcrInvoiceUpload - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  215. supplierMinimumPurchaseOrderAmount - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  216. supplierNonStandardTaxId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  217. supplierNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  218. supplierNumberOld - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  219. supplierOrderBlock - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  220. supplierPaymentMethodId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  221. supplierShipmentMethodId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  222. supplierTermOfPaymentId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  223. taxId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  224. topics - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  225. topics[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  226. vatIdentificationNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  227. xRechnungLeitwegId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 46.0, minLength: -
+
+--- GET /party/count ---
+Summary: count party
+
+Parameters:
+  1. filter - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+
+--- DELETE /party/id/{id} ---
+Summary: delete a party
+
+Parameters:
+  1. id - required: yes, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  2. dryRun - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+
+--- GET /party/id/{id} ---
+Summary: query a specific party
+
+Parameters:
+  1. id - required: yes, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+
+--- PUT /party/id/{id} ---
+Summary: update a party
+
+Parameters:
+  1. id - required: yes, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  2. dryRun - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  3. id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  4. createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  5. lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  6. version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  7. customAttributes - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  8. customAttributes[]attributeDefinitionId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  9. customAttributes[]booleanValue - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  10. customAttributes[]dateValue - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  11. customAttributes[]entityId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  12. customAttributes[]entityReferences - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  13. customAttributes[]entityReferences[]entityId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  14. customAttributes[]entityReferences[]entityName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  15. customAttributes[]numberValue - required: no, type: string, format: decimal, enum: -, pattern: -, maxLength: -, minLength: -
+  16. customAttributes[]selectedValueId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  17. customAttributes[]selectedValues - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  18. customAttributes[]selectedValues[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  19. customAttributes[]stringValue - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  20. addresses - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  21. addresses[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  22. addresses[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  23. addresses[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  24. addresses[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  25. addresses[]city - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  26. addresses[]company - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  27. addresses[]company2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  28. addresses[]countryCode - required: no, type: string, format: -, enum: [AC,AD,AE,AF,AG,AI,AL,AM,AN,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CS,CU,CV,CW,CX,CY,CZ,DE,DG,DJ,DK,DM,DO,DZ,EA,EC,EE,EG,EH,ER,ES,ET,EU,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,IC,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,SS,ST,SV,SX,SY,SZ,TA,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,UNKNOWN,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,XI,XK,YE,YT,ZA,ZM,ZW], pattern: -, maxLength: -, minLength: -
+  29. addresses[]deliveryAddress - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  30. addresses[]firstName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  31. addresses[]globalLocationNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  32. addresses[]invoiceAddress - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  33. addresses[]lastName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  34. addresses[]phoneNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  35. addresses[]postOfficeBoxCity - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  36. addresses[]postOfficeBoxNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  37. addresses[]postOfficeBoxZipCode - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  38. addresses[]primaryAddress - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  39. addresses[]salutation - required: no, type: string, format: -, enum: [COMPANY,FAMILY,MR,MRS,NO_SALUTATION], pattern: -, maxLength: -, minLength: -
+  40. addresses[]state - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  41. addresses[]street1 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  42. addresses[]street2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  43. addresses[]titleId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  44. addresses[]zipcode - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  45. birthDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  46. company - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  47. company2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  48. deliveryAddressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  49. email - required: no, type: string, format: email, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  50. emailHome - required: no, type: string, format: email, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  51. fax - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  52. firstName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  53. invoiceAddressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  54. lastName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  55. middleName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  56. mobilePhone1 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  57. onlineAccounts - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  58. onlineAccounts[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  59. onlineAccounts[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  60. onlineAccounts[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  61. onlineAccounts[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  62. onlineAccounts[]accountName - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  63. onlineAccounts[]accountType - required: no, type: string, format: -, enum: [AMAZON,BLOG,EBAY,FACEBOOK,GOOGLE_DRIVE,INSTAGRAM,LINKEDIN,OTHER,PINTEREST,SKYPE,SLIDESHARE,TWITTER,WIKIPEDIA,XING,YELP,YOUTUBE], pattern: -, maxLength: -, minLength: -
+  64. onlineAccounts[]url - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  65. partyType - required: no, type: string, format: -, enum: [ORGANIZATION,PERSON], pattern: -, maxLength: -, minLength: -
+  66. personCompany - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  67. personDepartmentId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  68. personRoleId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  69. phone - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  70. primaryAddressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  71. salutation - required: no, type: string, format: -, enum: [COMPANY,FAMILY,MR,MRS,NO_SALUTATION], pattern: -, maxLength: -, minLength: -
+  72. tags - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  73. titleId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  74. website - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  75. bankAccounts - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  76. bankAccounts[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  77. bankAccounts[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  78. bankAccounts[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  79. bankAccounts[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  80. bankAccounts[]accountHolder - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  81. bankAccounts[]accountNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  82. bankAccounts[]bankCode - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  83. bankAccounts[]creditInstitute - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  84. bankAccounts[]partyId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  85. bankAccounts[]primary - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  86. commercialLanguageId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  87. commissionBlock - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  88. commissionSalesPartners - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  89. commissionSalesPartners[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  90. commissionSalesPartners[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  91. commissionSalesPartners[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  92. commissionSalesPartners[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  93. commissionSalesPartners[]commissionFix - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  94. commissionSalesPartners[]commissionPercentage - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  95. commissionSalesPartners[]commissionType - required: no, type: string, format: -, enum: [FIX,FIX_AND_MARGIN,FIX_AND_REVENUE,MARGIN,NO_COMMISSION,REVENUE], pattern: -, maxLength: -, minLength: -
+  96. commissionSalesPartners[]salesPartnerSupplierId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  97. companySizeId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  98. competitor - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  99. contacts - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  100. contacts[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  101. convertedOnDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  102. currencyId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  103. customer - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  104. customerAllowDropshippingOrderCreation - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  105. customerAmountInsured - required: no, type: string, format: decimal, enum: -, pattern: ^-?([0-9]{1,14})([.][0-9]{1,4})?$, maxLength: -, minLength: -
+  106. customerAnnualRevenue - required: no, type: string, format: decimal, enum: -, pattern: ^-?([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  107. customerBlockNotice - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  108. customerBlocked - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  109. customerBusinessType - required: no, type: string, format: -, enum: [B2B,B2C,B2G], pattern: -, maxLength: -, minLength: -
+  110. customerCategoryId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  111. customerCreditLimit - required: no, type: string, format: decimal, enum: -, pattern: ^-?([0-9]{1,14})([.][0-9]{1,4})?$, maxLength: -, minLength: -
+  112. customerCurrentSalesStageId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  113. customerDebtorAccountId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  114. customerDebtorAccountingCodeId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  115. customerDefaultHeaderDiscount - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  116. customerDefaultHeaderSurcharge - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  117. customerDefaultShippingCarrierId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  118. customerDefaultWarehouseId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  119. customerDeliveryBlock - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  120. customerInsolvent - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  121. customerInsured - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  122. customerInternalNote - required: no, type: string, format: html, enum: -, pattern: -, maxLength: 4000.0, minLength: -
+  123. customerLossDescription - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  124. customerLossReasonId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  125. customerNonStandardTaxId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  126. customerNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  127. customerNumberOld - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  128. customerPaymentMethodId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  129. customerSalesChannel - required: no, type: string, format: -, enum: [GROSS1,GROSS10,GROSS100,GROSS101,GROSS102,GROSS103,GROSS104,GROSS105,GROSS106,GROSS107,GROSS108,GROSS109,GROSS11,GROSS110,GROSS111,GROSS112,GROSS113,GROSS114,GROSS115,GROSS116,GROSS117,GROSS118,GROSS119,GROSS12,GROSS120,GROSS121,GROSS122,GROSS123,GROSS124,GROSS125,GROSS126,GROSS127,GROSS128,GROSS129,GROSS13,GROSS130,GROSS131,GROSS132,GROSS133,GROSS134,GROSS135,GROSS136,GROSS137,GROSS138,GROSS139,GROSS14,GROSS140,GROSS141,GROSS142,GROSS143,GROSS144,GROSS145,GROSS146,GROSS147,GROSS148,GROSS149,GROSS15,GROSS150,GROSS151,GROSS152,GROSS153,GROSS154,GROSS155,GROSS156,GROSS157,GROSS158,GROSS159,GROSS16,GROSS160,GROSS161,GROSS162,GROSS163,GROSS164,GROSS165,GROSS166,GROSS167,GROSS168,GROSS169,GROSS17,GROSS170,GROSS171,GROSS172,GROSS173,GROSS174,GROSS175,GROSS176,GROSS177,GROSS178,GROSS179,GROSS18,GROSS180,GROSS181,GROSS182,GROSS183,GROSS184,GROSS185,GROSS186,GROSS187,GROSS188,GROSS189,GROSS19,GROSS190,GROSS191,GROSS192,GROSS193,GROSS194,GROSS195,GROSS196,GROSS197,GROSS198,GROSS199,GROSS2,GROSS20,GROSS200,GROSS201,GROSS202,GROSS203,GROSS204,GROSS205,GROSS206,GROSS207,GROSS208,GROSS209,GROSS21,GROSS210,GROSS211,GROSS212,GROSS213,GROSS214,GROSS215,GROSS216,GROSS217,GROSS218,GROSS219,GROSS22,GROSS220,GROSS221,GROSS222,GROSS223,GROSS224,GROSS225,GROSS226,GROSS227,GROSS228,GROSS229,GROSS23,GROSS230,GROSS231,GROSS232,GROSS233,GROSS234,GROSS235,GROSS236,GROSS237,GROSS238,GROSS239,GROSS24,GROSS240,GROSS241,GROSS242,GROSS243,GROSS244,GROSS245,GROSS246,GROSS247,GROSS248,GROSS249,GROSS25,GROSS250,GROSS251,GROSS252,GROSS253,GROSS254,GROSS255,GROSS256,GROSS257,GROSS258,GROSS259,GROSS26,GROSS260,GROSS261,GROSS262,GROSS263,GROSS264,GROSS265,GROSS266,GROSS267,GROSS268,GROSS269,GROSS27,GROSS270,GROSS271,GROSS272,GROSS273,GROSS274,GROSS275,GROSS276,GROSS277,GROSS278,GROSS279,GROSS28,GROSS280,GROSS281,GROSS282,GROSS283,GROSS284,GROSS285,GROSS286,GROSS287,GROSS288,GROSS289,GROSS29,GROSS290,GROSS291,GROSS292,GROSS293,GROSS294,GROSS295,GROSS296,GROSS297,GROSS298,GROSS299,GROSS3,GROSS30,GROSS300,GROSS31,GROSS32,GROSS33,GROSS34,GROSS35,GROSS36,GROSS37,GROSS38,GROSS39,GROSS4,GROSS40,GROSS41,GROSS42,GROSS43,GROSS44,GROSS45,GROSS46,GROSS47,GROSS48,GROSS49,GROSS5,GROSS50,GROSS51,GROSS52,GROSS53,GROSS54,GROSS55,GROSS56,GROSS57,GROSS58,GROSS59,GROSS6,GROSS60,GROSS61,GROSS62,GROSS63,GROSS64,GROSS65,GROSS66,GROSS67,GROSS68,GROSS69,GROSS7,GROSS70,GROSS71,GROSS72,GROSS73,GROSS74,GROSS75,GROSS76,GROSS77,GROSS78,GROSS79,GROSS8,GROSS80,GROSS81,GROSS82,GROSS83,GROSS84,GROSS85,GROSS86,GROSS87,GROSS88,GROSS89,GROSS9,GROSS90,GROSS91,GROSS92,GROSS93,GROSS94,GROSS95,GROSS96,GROSS97,GROSS98,GROSS99,NET1,NET10,NET100,NET101,NET102,NET103,NET104,NET105,NET106,NET107,NET108,NET109,NET11,NET110,NET111,NET112,NET113,NET114,NET115,NET116,NET117,NET118,NET119,NET12,NET120,NET121,NET122,NET123,NET124,NET125,NET126,NET127,NET128,NET129,NET13,NET130,NET131,NET132,NET133,NET134,NET135,NET136,NET137,NET138,NET139,NET14,NET140,NET141,NET142,NET143,NET144,NET145,NET146,NET147,NET148,NET149,NET15,NET150,NET151,NET152,NET153,NET154,NET155,NET156,NET157,NET158,NET159,NET16,NET160,NET161,NET162,NET163,NET164,NET165,NET166,NET167,NET168,NET169,NET17,NET170,NET171,NET172,NET173,NET174,NET175,NET176,NET177,NET178,NET179,NET18,NET180,NET181,NET182,NET183,NET184,NET185,NET186,NET187,NET188,NET189,NET19,NET190,NET191,NET192,NET193,NET194,NET195,NET196,NET197,NET198,NET199,NET2,NET20,NET200,NET201,NET202,NET203,NET204,NET205,NET206,NET207,NET208,NET209,NET21,NET210,NET211,NET212,NET213,NET214,NET215,NET216,NET217,NET218,NET219,NET22,NET220,NET221,NET222,NET223,NET224,NET225,NET226,NET227,NET228,NET229,NET23,NET230,NET231,NET232,NET233,NET234,NET235,NET236,NET237,NET238,NET239,NET24,NET240,NET241,NET242,NET243,NET244,NET245,NET246,NET247,NET248,NET249,NET25,NET250,NET251,NET252,NET253,NET254,NET255,NET256,NET257,NET258,NET259,NET26,NET260,NET261,NET262,NET263,NET264,NET265,NET266,NET267,NET268,NET269,NET27,NET270,NET271,NET272,NET273,NET274,NET275,NET276,NET277,NET278,NET279,NET28,NET280,NET281,NET282,NET283,NET284,NET285,NET286,NET287,NET288,NET289,NET29,NET290,NET291,NET292,NET293,NET294,NET295,NET296,NET297,NET298,NET299,NET3,NET30,NET300,NET31,NET32,NET33,NET34,NET35,NET36,NET37,NET38,NET39,NET4,NET40,NET41,NET42,NET43,NET44,NET45,NET46,NET47,NET48,NET49,NET5,NET50,NET51,NET52,NET53,NET54,NET55,NET56,NET57,NET58,NET59,NET6,NET60,NET61,NET62,NET63,NET64,NET65,NET66,NET67,NET68,NET69,NET7,NET70,NET71,NET72,NET73,NET74,NET75,NET76,NET77,NET78,NET79,NET8,NET80,NET81,NET82,NET83,NET84,NET85,NET86,NET87,NET88,NET89,NET9,NET90,NET91,NET92,NET93,NET94,NET95,NET96,NET97,NET98,NET99], pattern: -, maxLength: -, minLength: -
+  130. customerSalesOrderPaymentType - required: no, type: string, format: -, enum: [ADVANCE_PAYMENT,COUNTER_SALES,PART_PAYMENT,PREPAYMENT,STANDARD], pattern: -, maxLength: -, minLength: -
+  131. customerSalesProbability - required: no, type: integer, format: int32, enum: -, pattern: -, maxLength: -, minLength: -
+  132. customerSalesStageHistory - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  133. customerSalesStageHistory[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  134. customerSalesStageHistory[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  135. customerSalesStageHistory[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  136. customerSalesStageHistory[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  137. customerSalesStageHistory[]salesStageId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  138. customerSalesStageHistory[]userId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  139. customerSatisfaction - required: no, type: string, format: -, enum: [NEUTRAL,SATISFIED,UNSATISFIED], pattern: -, maxLength: -, minLength: -
+  140. customerShipmentMethodId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  141. customerSupplierNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  142. customerTermOfPaymentId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  143. customerUseCustomsTariffNumber - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  144. deliveryEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  145. description - required: no, type: string, format: html, enum: -, pattern: -, maxLength: -, minLength: -
+  146. dunningAddressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  147. dunningEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  148. enableDropshippingInNewSupplySources - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  149. eoriNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  150. factoring - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  151. fixPhone2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  152. fixedResponsibleUser - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  153. formerSalesPartner - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  154. habitualExporter - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  155. imageId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  156. invoiceBlock - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  157. invoiceRecipientId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  158. leadRatingId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  159. leadSourceId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  160. leadStatus - required: no, type: string, format: -, enum: [CONVERTED,DISQUALIFIED,NEW,PREQUALIFIED,QUALIFIED], pattern: -, maxLength: -, minLength: -
+  161. legalFormId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  162. mobilePhone2 - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  163. optInEmail - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  164. optInLetter - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  165. optInPhone - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  166. optInSms - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  167. parentPartyId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  168. partyEmailAddresses - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  169. partyEmailAddresses[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  170. partyEmailAddresses[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  171. partyEmailAddresses[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  172. partyEmailAddresses[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  173. partyEmailAddresses[]bccAddresses - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  174. partyEmailAddresses[]ccAddresses - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  175. partyEmailAddresses[]toAddresses - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  176. partyHabitualExporterLettersOfIntent - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  177. partyHabitualExporterLettersOfIntent[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  178. partyHabitualExporterLettersOfIntent[]createdDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  179. partyHabitualExporterLettersOfIntent[]lastModifiedDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  180. partyHabitualExporterLettersOfIntent[]version - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  181. partyHabitualExporterLettersOfIntent[]automaticallySuggestInInvoice - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  182. partyHabitualExporterLettersOfIntent[]date - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  183. partyHabitualExporterLettersOfIntent[]fromSupplier - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  184. partyHabitualExporterLettersOfIntent[]invoices - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  185. partyHabitualExporterLettersOfIntent[]invoices[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  186. partyHabitualExporterLettersOfIntent[]numberDeclarer - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 30.0, minLength: -
+  187. partyHabitualExporterLettersOfIntent[]numberSupplier - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 30.0, minLength: -
+  188. partyHabitualExporterLettersOfIntent[]totalAmount - required: no, type: string, format: decimal, enum: -, pattern: ^-?([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  189. partyHabitualExporterLettersOfIntent[]type - required: no, type: string, format: -, enum: [MULTIPLE_ACCOUNTING_EVENTS,SINGLE_ACCOUNTING_EVENT], pattern: -, maxLength: -, minLength: -
+  190. phoneHome - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  191. primaryContactId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  192. publicPageExpirationDate - required: no, type: integer, format: timestamp, enum: -, pattern: -, maxLength: -, minLength: -
+  193. publicPageUuid - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  194. purchaseEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  195. purchaseViaPlafond - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  196. quotationEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  197. ratingId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  198. referenceNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  199. regionId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  200. responsibleUserId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  201. salesInvoiceEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  202. salesOrderEmailAddressesId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  203. salesPartner - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  204. salesPartnerDefaultCommissionFix - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  205. salesPartnerDefaultCommissionPercentage - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  206. salesPartnerDefaultCommissionType - required: no, type: string, format: -, enum: [FIX,FIX_AND_MARGIN,FIX_AND_REVENUE,MARGIN,NO_COMMISSION,REVENUE], pattern: -, maxLength: -, minLength: -
+  207. sectorId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  208. supplier - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  209. supplierActive - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  210. supplierCreditorAccountId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  211. supplierCreditorAccountingCodeId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  212. supplierCustomerNumberAtSupplier - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 64.0, minLength: -
+  213. supplierDefaultShippingCarrierId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  214. supplierInternalNote - required: no, type: string, format: html, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  215. supplierMergeItemsForOcrInvoiceUpload - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  216. supplierMinimumPurchaseOrderAmount - required: no, type: string, format: decimal, enum: -, pattern: ^([0-9]{1,13})([.][0-9]{1,5})?$, maxLength: -, minLength: -
+  217. supplierNonStandardTaxId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  218. supplierNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  219. supplierNumberOld - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  220. supplierOrderBlock - required: no, type: boolean, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  221. supplierPaymentMethodId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  222. supplierShipmentMethodId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  223. supplierTermOfPaymentId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  224. taxId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  225. topics - required: no, type: array, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  226. topics[]id - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  227. vatIdentificationNumber - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 1000.0, minLength: -
+  228. xRechnungLeitwegId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: 46.0, minLength: -
+
+--- POST /party/id/{id}/createPublicPage ---
+Summary: -
+
+Parameters:
+  1. id - required: yes, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+
+--- GET /party/id/{id}/downloadImage ---
+Summary: -
+
+Parameters:
+  1. id - required: yes, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  2. scaleWidth - required: no, type: integer, format: int32, enum: -, pattern: -, maxLength: -, minLength: -
+  3. scaleHeight - required: no, type: integer, format: int32, enum: -, pattern: -, maxLength: -, minLength: -
+  4. imageId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+
+--- POST /party/id/{id}/startTransferAddressesToOpenRecords ---
+Summary: -
+
+Parameters:
+  1. id - required: yes, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  2. addressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+
+--- POST /party/id/{id}/startTransferEmailAddressesToOpenRecords ---
+Summary: -
+
+Parameters:
+  1. id - required: yes, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+  2. partyEmailAddressId - required: no, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
+
+--- POST /party/id/{id}/uploadImage ---
+Summary: -
+
+Parameters:
+  1. id - required: yes, type: string, format: -, enum: -, pattern: -, maxLength: -, minLength: -
